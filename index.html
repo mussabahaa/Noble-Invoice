@@ -34,7 +34,6 @@
       font-family: 'Montserrat', sans-serif;
       color: var(--text-main);
       padding: 20px 10px;
-      min-height: 100%;
     }
 
     /* Action bar */
@@ -92,19 +91,18 @@
       background: #F8FAFC;
     }
 
-    /* Outer Wrapper for responsive scrolling on phones */
+    /* Responsive outer horizontal scroll wrapper for phone screens */
     .invoice-scroll-wrapper {
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      padding-bottom: 20px;
+      padding-bottom: 25px;
     }
 
-    /* Invoice Paper Container (Fixed 860px Letter Width) */
+    /* Main Invoice Paper Canvas (Exact 860px Letter Proportion) */
     .invoice-container {
       width: 860px;
       min-width: 860px;
-      min-height: 1115px;
       margin: 0 auto;
       background: #FFFFFF;
       box-shadow: 0 8px 30px rgba(11, 25, 44, 0.1);
@@ -144,10 +142,10 @@
     }
 
     .content-wrap {
-      padding: 45px 55px 20px 55px;
+      padding: 45px 55px 15px 55px;
       position: relative;
       z-index: 2;
-      flex: 1;
+      flex: 1 0 auto;
       display: flex;
       flex-direction: column;
     }
@@ -412,7 +410,7 @@
     }
 
     .qr-center-container {
-      margin: auto auto 15px auto;
+      margin: 15px auto 25px auto;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -527,7 +525,6 @@
       background: #F0F7FC;
     }
 
-    /* Mobile Screen Adjustments */
     @media screen and (max-width: 768px) {
       body {
         padding: 10px 4px;
@@ -548,7 +545,7 @@
       }
     }
 
-    /* Print Mode (US Letter Exact) */
+    /* Print Mode (Strict US Letter Fit) */
     @media print {
       @page {
         margin: 0;
@@ -559,7 +556,8 @@
         padding: 0 !important;
         margin: 0 !important;
         width: 100% !important;
-        height: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
         color-adjust: exact !important;
@@ -576,15 +574,18 @@
         max-width: 100% !important;
         width: 100% !important;
         min-width: 100% !important;
-        height: 100vh !important;
-        min-height: 100vh !important;
+        height: 100% !important;
+        min-height: 1040px !important;
         border-radius: 0 !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
       }
       .content-wrap {
         flex: 1 0 auto !important;
+        padding-bottom: 10px !important;
       }
       .top-curved-wing {
         background: linear-gradient(135deg, #0077B6 0%, #0B192C 70%) !important;
@@ -654,7 +655,7 @@
       <div class="content-wrap">
         <div class="header-row">
           <div class="logo-box">
-            <img src="Logo 2.jpg" alt="Noble Remote Services Logo" class="logo-img" />
+            <img src="https://mussabahaa.github.io/invoice/Logo%202.jpg" alt="Noble Remote Services Logo" class="logo-img" />
           </div>
           <div class="invoice-title-col">
             <h1>INVOICE</h1>
