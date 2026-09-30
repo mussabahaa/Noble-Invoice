@@ -600,8 +600,8 @@
         </div>
         <div class="invoice-title-col">
           <h1 class="editable" contenteditable="true">INVOICE</h1>
-          <div class="meta-line">Invoice No. <strong class="editable" contenteditable="true">NRS-001</strong></div>
-          <div class="meta-line">Date <strong class="editable" contenteditable="true">MM/DD/YYYY</strong></div>
+          <div class="meta-line">Invoice No. <strong class="editable" contenteditable="true">NRS-026</strong></div>
+          <div class="meta-line">Date <strong class="editable" contenteditable="true">10/01/2026</strong></div>
         </div>
       </div>
 
@@ -628,16 +628,16 @@
         <div>
           <div class="col-header editable" contenteditable="true">BILL TO</div>
           <div class="info-card-text">
-            <strong class="entity-name editable" contenteditable="true">CLIENT / COMPANY NAME</strong>
-            <p class="editable" contenteditable="true">Street Address, Suite / Unit</p>
-            <p class="editable" contenteditable="true">City, State, ZIP</p>
+            <strong class="entity-name editable" contenteditable="true">COACH GUARD</strong>
+            <p class="editable" contenteditable="true">9836 White Oak Ave, Suite 103</p>
+            <p class="editable" contenteditable="true">Northridge, CA 91325</p>
             <div class="contact-item">
               <span class="contact-label editable" contenteditable="true">Attn:</span>
-              <span class="editable" contenteditable="true">Contact Person</span>
+              <span class="editable" contenteditable="true">Faisal Ahmad</span>
             </div>
             <div class="contact-item">
               <span class="contact-label editable" contenteditable="true">Direct:</span>
-              <span class="editable" contenteditable="true">+1 (000) 000-0000</span>
+              <span class="editable" contenteditable="true">+1 (818) 674-1857</span>
             </div>
           </div>
         </div>
@@ -647,7 +647,7 @@
           <div class="card-amount" id="cardAmountDue">$0.00</div>
           <div class="card-due-date">
             <span class="editable" contenteditable="true">Due Date:</span>
-            <strong class="editable" contenteditable="true">Within three days / Due upon receipt</strong>
+            <strong class="editable" contenteditable="true">Within three days / 10/04/2026</strong>
           </div>
         </div>
       </div>
@@ -656,7 +656,7 @@
         <thead>
           <tr>
             <th class="align-left editable" contenteditable="true" style="width: 25%;">Description</th>
-            <th class="align-left editable" contenteditable="true" style="width: 38%;">Pay Period / Service Dates</th>
+            <th class="align-left editable date-cell" contenteditable="true" style="width: 38%;">Pay Period / Service Dates</th>
             <th class="align-center editable" contenteditable="true" style="width: 11%;">Total Hours</th>
             <th class="align-right editable" contenteditable="true" style="width: 11%;">Unit Price</th>
             <th class="align-right editable" contenteditable="true" style="width: 15%;">Total</th>
@@ -665,10 +665,10 @@
         </thead>
         <tbody id="invoiceBody">
           <tr>
-            <td class="align-left editable" contenteditable="true"><strong>Service Description</strong></td>
-            <td class="align-left editable date-cell" contenteditable="true">Start Date - End Date</td>
+            <td class="align-left editable" contenteditable="true"><strong>24/7 Dispatch Service</strong></td>
+            <td class="align-left editable date-cell" contenteditable="true">09/16 12:00 AM To 10/01 12:00 AM</td>
             <td class="align-center editable qty" contenteditable="true" oninput="calculateInvoice()"></td>
-            <td class="align-right editable rate" contenteditable="true" oninput="calculateInvoice()">$0.00</td>
+            <td class="align-right editable rate" contenteditable="true" oninput="calculateInvoice()"></td>
             <td class="align-right line-total"><strong>$0.00</strong></td>
             <td class="del-col align-center"><span class="del-btn" onclick="deleteRow(this)">×</span></td>
           </tr>
@@ -687,7 +687,7 @@
             <strong id="subtotalDisplay">$0.00</strong>
           </div>
           <div class="totals-row">
-            <span class="editable" contenteditable="true">Commission (2.5%):</span>
+            <span class="editable" contenteditable="true">Sarafi Commission (2.5%):</span>
             <strong id="commissionDisplay">$0.00</strong>
           </div>
           <div class="total-due-banner">
@@ -701,10 +701,10 @@
       <div class="bottom-info-single">
         <div class="info-section-title editable" contenteditable="true">PAYMENT INFORMATION</div>
         <div class="info-section-body">
-          <p><strong class="editable" contenteditable="true">Payment Method:</strong> <span class="editable" contenteditable="true">Zelle / Wire Transfer</span></p>
-          <p><strong class="editable" contenteditable="true">Account Name:</strong> <span class="editable" contenteditable="true">Account Name</span></p>
-          <p><strong class="editable" contenteditable="true">Payment ID / No.:</strong> <span class="editable" contenteditable="true" style="color: #0077B6;">[Click to enter Account Number, Phone or Email]</span></p>
-          <p><strong class="editable" contenteditable="true">Address:</strong> <span class="editable" contenteditable="true">Business Address</span></p>
+          <p><strong class="editable" contenteditable="true">Payment Method:</strong> <span class="editable" contenteditable="true">Zelle</span></p>
+          <p><strong class="editable" contenteditable="true">Account Name:</strong> <span class="editable" contenteditable="true">Ahmad Zia Abdali</span></p>
+          <p><strong class="editable" contenteditable="true">Zelle No.:</strong> <span class="editable" contenteditable="true" style="color: #0077B6;">[Click to enter Zelle Phone or Email]</span></p>
+          <p><strong class="editable" contenteditable="true">Address:</strong> <span class="editable" contenteditable="true">20th Street, Aino Mena, Kandahar, Afghanistan</span></p>
           <p><strong class="editable" contenteditable="true">Pay by:</strong> <span class="editable" contenteditable="true">Within three days</span></p>
         </div>
       </div>
@@ -770,10 +770,10 @@
       const tbody = document.getElementById('invoiceBody');
       const tr = document.createElement('tr');
       tr.innerHTML = `
-        <td class="align-left editable" contenteditable="true"><strong>New Service / Shift</strong></td>
+        <td class="align-left editable" contenteditable="true"><strong>24/7 Dispatch Service</strong></td>
         <td class="align-left editable date-cell" contenteditable="true">Service Dates</td>
         <td class="align-center editable qty" contenteditable="true" oninput="calculateInvoice()"></td>
-        <td class="align-right editable rate" contenteditable="true" oninput="calculateInvoice()">$0.00</td>
+        <td class="align-right editable rate" contenteditable="true" oninput="calculateInvoice()"></td>
         <td class="align-right line-total"><strong>$0.00</strong></td>
         <td class="del-col align-center"><span class="del-btn" onclick="deleteRow(this)">×</span></td>
       `;
