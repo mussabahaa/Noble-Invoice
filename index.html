@@ -16,8 +16,9 @@
       --ice-tint: #F0F7FC;
       --card-border: #BFDBFE;
       --text-main: #1E293B;
-      --text-muted: #64748B;
-      --border-gray: #E2E8F0;
+      --text-muted: #475569;
+      --border-gray: #CBD5E1;
+      --table-border: #94A3B8;
     }
 
     * {
@@ -50,7 +51,7 @@
     }
 
     .action-bar h3 {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--primary-navy);
       font-weight: 700;
     }
@@ -61,8 +62,8 @@
     }
 
     .btn {
-      padding: 9px 18px;
-      font-size: 13px;
+      padding: 10px 20px;
+      font-size: 14px;
       font-weight: 600;
       border-radius: 6px;
       cursor: pointer;
@@ -168,7 +169,7 @@
 
     .invoice-title-col h1 {
       font-family: 'Cinzel', serif;
-      font-size: 38px;
+      font-size: 40px;
       letter-spacing: 6px;
       color: var(--vivid-blue) !important;
       font-weight: 700;
@@ -177,7 +178,7 @@
     }
 
     .meta-line {
-      font-size: 12px;
+      font-size: 13.5px;
       color: var(--text-muted);
       margin-bottom: 4px;
     }
@@ -204,7 +205,7 @@
     }
 
     .col-header {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
       color: var(--vivid-blue) !important;
@@ -213,13 +214,13 @@
     }
 
     .info-card-text {
-      font-size: 12.5px;
+      font-size: 13.5px;
       line-height: 1.6;
       color: var(--text-muted);
     }
 
     .info-card-text strong.entity-name {
-      font-size: 13.5px;
+      font-size: 15px;
       color: var(--primary-navy);
       display: block;
       margin-bottom: 3px;
@@ -227,7 +228,7 @@
 
     .contact-item {
       margin-top: 5px;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.5;
     }
 
@@ -235,7 +236,7 @@
       font-weight: 700;
       color: var(--primary-navy);
       display: inline-block;
-      min-width: 52px;
+      min-width: 58px;
     }
 
     .amount-due-card {
@@ -252,7 +253,7 @@
     }
 
     .card-label {
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 800;
       letter-spacing: 1.8px;
       text-transform: uppercase;
@@ -261,7 +262,7 @@
     }
 
     .card-amount {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 800;
       color: var(--primary-navy) !important;
       line-height: 1.2;
@@ -269,32 +270,34 @@
     }
 
     .card-due-date {
-      font-size: 11.5px;
+      font-size: 12.5px;
       color: var(--text-muted);
     }
 
     .card-due-date strong {
       color: var(--primary-navy);
       display: block;
-      font-size: 12px;
+      font-size: 13px;
       margin-top: 2px;
     }
 
+    /* Table with visible grid/cell borders */
     table.invoice-table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 25px;
+      border: 1.5px solid var(--primary-navy);
     }
 
     table.invoice-table th {
       background: var(--primary-navy) !important;
       color: #FFFFFF !important;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 1.2px;
       font-weight: 700;
       text-transform: uppercase;
       padding: 12px 10px;
-      border: none;
+      border: 1px solid var(--primary-navy);
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
     }
@@ -304,9 +307,9 @@
     table.invoice-table th.align-right { text-align: right; }
 
     table.invoice-table td {
-      padding: 13px 10px;
-      font-size: 12.5px;
-      border-bottom: 1px solid var(--border-gray);
+      padding: 14px 10px;
+      font-size: 13.5px;
+      border: 1px solid var(--table-border);
       color: var(--text-main);
     }
 
@@ -321,7 +324,7 @@
 
     .del-btn {
       color: #EF4444;
-      font-size: 16px;
+      font-size: 17px;
       cursor: pointer;
       user-select: none;
       font-weight: bold;
@@ -335,14 +338,14 @@
     }
 
     .totals-calc-table {
-      width: 320px;
+      width: 340px;
     }
 
     .totals-row {
       display: flex;
       justify-content: space-between;
-      font-size: 12.5px;
-      padding: 5px 0;
+      font-size: 13.5px;
+      padding: 6px 0;
       color: var(--text-muted);
     }
 
@@ -356,7 +359,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 16px;
+      padding: 12px 18px;
       margin-top: 10px;
       border-radius: 3px;
       -webkit-print-color-adjust: exact !important;
@@ -364,7 +367,7 @@
     }
 
     .total-due-banner span {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -372,20 +375,18 @@
     }
 
     .total-due-banner strong {
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: 0;
       color: #FFFFFF !important;
     }
 
-    .bottom-info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+    .bottom-info-single {
       margin-bottom: 25px;
+      max-width: 580px;
     }
 
     .info-section-title {
-      font-size: 10.5px;
+      font-size: 11.5px;
       font-weight: 800;
       letter-spacing: 1.5px;
       color: var(--vivid-blue) !important;
@@ -394,8 +395,8 @@
     }
 
     .info-section-body {
-      font-size: 12px;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.7;
       color: var(--text-muted);
     }
 
@@ -403,57 +404,10 @@
       color: var(--primary-navy);
     }
 
-    /* QR Code Center Box before Footer */
-    .qr-center-container {
-      margin: auto auto 15px auto;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .qr-marketing-box {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      border: 1px solid var(--border-gray) !important;
-      background: #FAFCFE !important;
-      padding: 12px 20px;
-      border-radius: 6px;
-      max-width: 440px;
-      width: 100%;
-      box-shadow: 0 2px 8px rgba(11, 25, 44, 0.04);
-      -webkit-print-color-adjust: exact !important;
-      print-color-adjust: exact !important;
-    }
-
-    .qr-marketing-box img {
-      width: 65px;
-      height: 65px;
-      border-radius: 4px;
-      border: 1px solid var(--card-border);
-      background: #FFFFFF;
-      padding: 3px;
-      flex-shrink: 0;
-    }
-
-    .qr-marketing-text h4 {
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--primary-navy) !important;
-      margin-bottom: 4px;
-    }
-
-    .qr-marketing-text p {
-      font-size: 11px;
-      line-height: 1.45;
-      color: var(--text-muted);
-    }
-
+    /* Footer Container with Embedded QR Code */
     .bottom-bar {
       background: var(--primary-navy) !important;
-      padding: 18px 55px;
+      padding: 14px 45px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -491,16 +445,33 @@
       print-color-adjust: exact !important;
     }
 
-    .thank-you-script {
-      font-family: 'Great Vibes', cursive;
-      font-size: 24px;
-      color: #FFFFFF !important;
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
       position: relative;
       z-index: 2;
     }
 
+    .footer-qr {
+      width: 48px;
+      height: 48px;
+      background: #FFFFFF;
+      padding: 2px;
+      border-radius: 4px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .thank-you-script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 26px;
+      color: #FFFFFF !important;
+      line-height: 1;
+    }
+
     .footer-web-info {
-      font-size: 11px;
+      font-size: 12px;
       color: #FFFFFF !important;
       display: flex;
       gap: 16px;
@@ -561,9 +532,16 @@
       .divider-bar {
         background: linear-gradient(90deg, #0077B6 0%, #00A8E8 30%, #E2E8F0 100%) !important;
       }
+      table.invoice-table {
+        border: 1.5px solid #0B192C !important;
+      }
       table.invoice-table th {
         background-color: #0B192C !important;
         color: #FFFFFF !important;
+        border: 1px solid #0B192C !important;
+      }
+      table.invoice-table td {
+        border: 1px solid #94A3B8 !important;
       }
       .amount-due-card {
         background-color: #F0F7FC !important;
@@ -576,10 +554,6 @@
       .total-due-banner span, .total-due-banner strong {
         color: #FFFFFF !important;
       }
-      .qr-marketing-box {
-        background-color: #FAFCFE !important;
-        border: 1px solid #E2E8F0 !important;
-      }
       .bottom-bar {
         background-color: #0B192C !important;
         margin-top: auto !important;
@@ -589,6 +563,9 @@
       }
       .bottom-bar-accent-cyan {
         background-color: #00A8E8 !important;
+      }
+      .footer-qr {
+        background: #FFFFFF !important;
       }
       .thank-you-script, .footer-web-info, .footer-web-info span {
         color: #FFFFFF !important;
@@ -618,9 +595,9 @@
 
     <div class="content-wrap">
       <div class="header-row">
-<div class="logo-box">
-  <img src="Logo.png" alt="Noble Remote Services Logo" class="logo-img" />
-</div>
+        <div class="logo-box">
+          <img src="Logo.png" alt="Noble Remote Services Logo" class="logo-img" />
+        </div>
         <div class="invoice-title-col">
           <h1>INVOICE</h1>
           <div class="meta-line">Invoice No. <strong class="editable" contenteditable="true">NRS-026</strong></div>
@@ -699,7 +676,7 @@
       </table>
 
       <div class="add-row-container" style="margin-bottom: 20px;">
-        <button class="btn btn-secondary" style="font-size: 11px; padding: 5px 12px;" onclick="addRow()">+ Add Row</button>
+        <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 14px;" onclick="addRow()">+ Add Row</button>
       </div>
 
       <!-- Totals Section (Right Aligned) -->
@@ -720,44 +697,29 @@
         </div>
       </div>
 
-      <!-- Payment Details & Notes -->
-      <div class="bottom-info-grid">
-        <div>
-          <div class="info-section-title">PAYMENT INFORMATION</div>
-          <div class="info-section-body">
-            <p><strong>Payment Method:</strong> Zelle</p>
-            <p><strong>Account Name:</strong> Ahmad Zia Abdali</p>
-            <p><strong>Zelle No.:</strong> <span class="editable" contenteditable="true" style="color: #0077B6;">[Click to enter Zelle Phone or Email]</span></p>
-            <p><strong>Address:</strong> 20th Street, Aino Mena, Kandahar, Afghanistan</p>
-            <p><strong>Pay by:</strong> <span class="editable" contenteditable="true">Within three days</span></p>
-          </div>
-        </div>
-
-        <div>
-          <div class="info-section-title">NOTES</div>
-          <div class="info-section-body">
-            <p class="editable" contenteditable="true">Thank you for your business! Please ensure payment is remitted within the specified due date.</p>
-            <p class="editable" contenteditable="true" style="margin-top: 6px;">For billing assistance or questions regarding dispatch shifts, please contact info@nobleremote.com.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Centered QR Marketing Section below payment details / before footer -->
-      <div class="qr-center-container">
-        <div class="qr-marketing-box">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nobleremote.com" alt="QR Code nobleremote.com" />
-          <div class="qr-marketing-text">
-            <h4>Noble Remote Services</h4>
-            <p>Scan with your camera to visit our official website at <strong>nobleremote.com</strong> or contact dispatch support.</p>
-          </div>
+      <!-- Payment Details Section Only -->
+      <div class="bottom-info-single">
+        <div class="info-section-title">PAYMENT INFORMATION</div>
+        <div class="info-section-body">
+          <p><strong>Payment Method:</strong> Zelle</p>
+          <p><strong>Account Name:</strong> Ahmad Zia Abdali</p>
+          <p><strong>Zelle No.:</strong> <span class="editable" contenteditable="true" style="color: #0077B6;">[Click to enter Zelle Phone or Email]</span></p>
+          <p><strong>Address:</strong> 20th Street, Aino Mena, Kandahar, Afghanistan</p>
+          <p><strong>Pay by:</strong> <span class="editable" contenteditable="true">Within three days</span></p>
         </div>
       </div>
     </div>
 
+    <!-- Footer Bar with Clean Embedded QR Code -->
     <div class="bottom-bar">
       <div class="bottom-bar-accent-cyan"></div>
       <div class="bottom-bar-accent"></div>
-      <div class="thank-you-script">Thank you for your business.</div>
+      
+      <div class="footer-left">
+        <img class="footer-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nobleremote.com" alt="QR Code nobleremote.com" />
+        <div class="thank-you-script">Thank you for your business.</div>
+      </div>
+
       <div class="footer-web-info">
         <span>info@nobleremote.com</span>
         <span>&bull;</span>
